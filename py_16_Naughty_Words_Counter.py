@@ -38,10 +38,11 @@ try:
     scoreF = format (score, '.0%')
 
     print()
-    print('-' * 10 + ' The Naughty Report ' + 10 * '-')
+    title = '-' * 10 + ' The Naughty Report ' + 10 * '-'
+    print(title)
     print()
     for k, v in dicky.items():
-        print(k + ': ' + str(v))
+        print(k.rjust(int(len(title)/2)) + ': ' + str(v))
 
     print()
     print('Your movie`s Tarantinometer score: ' + scoreF)
