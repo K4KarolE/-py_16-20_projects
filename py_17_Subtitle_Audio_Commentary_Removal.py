@@ -17,7 +17,7 @@ try:
             if '(' in k and ')' in k:  # removing one word commentary from line like: "(SCOFFS) Don't be ridiculous."
                 i.remove(k)
             elif '(' in k and ')' not in k: # removing multiple words commentary from lines like: "(CHAINS RATTLING)" 
-                slicedList.remove(i)        # very small chance: there are lines where both previous condition is true
+                slicedList.remove(i)        # very small chance: there are lines where both previous conditions are true
                                             # and we remove a line with a non-commentary text
 
     for i in slicedList:             
