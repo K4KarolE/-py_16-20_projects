@@ -4,3 +4,6 @@
 
 17 - Automatically removing the audio commentary from the chosen subtitle
 - Audio Commentary format example: (THEME SONG PLAYS), (MAN GRUNTING)
+
+18 - Password Validator
+- accepting password if it is at least 8 characters long and contains at least one numeric character and uppercase, lowercase letter 
