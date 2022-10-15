@@ -105,7 +105,7 @@ while True:
         print('The movie was: ' + str(movietitle).strip())
 
     print()
-    bePart = 0
+    bePart = 0  # variable for a partially correct answers
 
     if answer == str(movietitle).lower():
         print('That is correct!')
