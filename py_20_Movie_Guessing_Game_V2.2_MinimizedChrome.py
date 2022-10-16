@@ -31,7 +31,7 @@ score = 0
 
 while True:
 # VALUE EXTRACTION FROM THE EXCEL
-    cellnumber = random.randrange(6,6951)
+    cellnumber = random.randrange(6,6948)
 
     cell = 'C' + str(cellnumber)
     movietitle = ws[cell].value
@@ -39,9 +39,17 @@ while True:
     cellRYear = 'E' + str(cellnumber)
     releaseYear = ws[cellRYear].value
 
-    while movietitle == None or movietitle == '-' or len(str(releaseYear)) != 4:        # movietitle == None: empty cell(1 title in at least 3 merged cells), 
-        cellnumber += 1                                                                 # movietitle == '-': excluding movies with no english title
-        cell = 'C' + str(cellnumber)                                                    # len(str(releaseYear)) != 4: excluding TV shows, "1992-1996"
+    def isItShow():                           # movie titles including S01, S02.. or it`s release year like "1992-1999" are TV shows
+        if len(str(releaseYear)) != 4:
+            return True
+        else:
+            for i in str(movietitle).split():
+                if i[0] == 'S' and len(i) == 3 and i[1].isdigit() and i[2].isdigit():
+                    return True
+            
+    while movietitle == None or movietitle == '-' or isItShow():   # movietitle == None: empty cell(1 title in at least 3 merged cells)
+        cellnumber += 1                                            # movietitle == '-': excluding movies with no english title
+        cell = 'C' + str(cellnumber)                               # isItShow: excluding TV shows
         movietitle = ws[cell].value
 
     cellRYear = 'E' + str(cellnumber)
