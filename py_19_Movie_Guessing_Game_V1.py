@@ -1,4 +1,3 @@
-# It is a variation of the 04_Movie_Title_Randomizer.py in py_03-08_projects
 # randomly picking a movie from MoviePY excel sheet
 # give a hint about the movie (release year, stars, director,..)
 # asking the user to guess the title

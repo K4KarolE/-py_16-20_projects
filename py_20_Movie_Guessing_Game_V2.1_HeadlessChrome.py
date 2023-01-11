@@ -1,7 +1,6 @@
 ''' Movie Guessing Game V2 - Excel + Selenium
 - pick a random title + it`s release year from the MoviePY excel sheet
-- look for it in a search engine combined with a movie database title / using search engine as a pre-step,
-  because (apart from IMDb) not able to search by movie title + release year, which makes our search more precise 
+- look for it in a search engine combined with a movie database title
 - open the first match = open the title`s movie database site
 - take the synopsys/plot of the movie and display it for the user
 - ask the user to guess the title
